@@ -5,24 +5,30 @@
       "title": "The Starlit Garden",
       "author": "Orie",
       "tagline": "A story about courage, curiosity, and the magic hiding in ordinary places.",
-      "description": "Maya has always felt like the odd one out — too curious for her own good, too imaginative for the kids at school, and way too obsessed with the overgrown lot at the end of Maple Street. But when she sneaks through the rusted gate one night, she finds something impossible: a garden that only exists under starlight.\n\nSuddenly, Maya is tangled up in a world of luminous flowers, talking foxes, and a mystery that has been waiting decades for someone brave enough to solve it. To save the garden — and maybe herself — Maya will have to trust her instincts, face her fears, and learn that the most extraordinary things grow in the most unexpected places.",
-      "coverImage": "/images/books/starlit-garden-cover.jpg",
-      "buyUrl": "https://oriestories-shop.fourthwall.com",
-      "genre": ["Middle Grade", "Fantasy"],
+      "description": "When twelve-year-old Maya discovers a hidden garden that only blooms under starlight, she stumbles into an adventure that will change the way she sees the world — and herself.\n\nSuddenly, Maya is tangled up in a world of luminous flowers, talking foxes, and a mystery that has been waiting decades for someone brave enough to solve it. To save the garden — and maybe herself — Maya will have to trust her instincts, face her fears, and learn that the most extraordinary things grow in the most unexpected places.",
+      "coverImage": "/images/books/the-starlit-garden.jpg",
+      "genre": "Fantasy",
       "ageRange": "Ages 8–12",
-      "publishDate": "2025-01-01",
-      "isFeatured": true,
-      "pages": 210,
-      "praise": [
-        {
-          "quote": "A sparkling debut full of wonder and heart. Orie has a gift for making you believe in magic.",
-          "attribution": "— A Young Reader"
-        },
-        {
-          "quote": "I read this in one sitting. The garden felt so real I kept looking out the window.",
-          "attribution": "— A Fan"
-        }
-      ]
+      "category": "Middle Grade",
+      "pageCount": 224,
+      "publishDate": "2025-06-01",
+      "buyLink": "https://oriestories-shop.fourthwall.com",
+      "featured": true
+    },
+    {
+      "slug": "whispers-in-the-walls",
+      "title": "Whispers in the Walls",
+      "author": "Orie",
+      "tagline": "Some houses have stories of their own.",
+      "description": "When Jonah's family moves into the old Bellwood house, everyone says it's just creaky floors and drafty windows. But Jonah hears something else — whispers that seem to come from inside the walls themselves.\n\nAs he follows the clues hidden in peeling wallpaper and loose floorboards, Jonah uncovers the story of a kid who lived there a hundred years ago — and a secret that was never meant to stay buried. Part mystery, part ghost story, all heart.",
+      "coverImage": "/images/books/whispers-in-the-walls.jpg",
+      "genre": "Mystery",
+      "ageRange": "Ages 8–12",
+      "category": "Middle Grade",
+      "pageCount": 192,
+      "publishDate": "2026-01-15",
+      "buyLink": "https://oriestories-shop.fourthwall.com",
+      "featured": false
     }
   ]
 }

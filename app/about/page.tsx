@@ -1,52 +1,54 @@
-import PageHeader from "@/components/PageHeader";
+import type { Metadata } from "next";
 import aboutData from "@/content/about.json";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function AboutPage() {
   return (
-    <>
-      <PageHeader title="About Orie" />
-      <section style={{ maxWidth: "64rem", margin: "0 auto", padding: "4rem 1.5rem" }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Portrait placeholder */}
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div style={{ width: "16rem", height: "16rem", borderRadius: "50%", backgroundColor: "#C8A96E", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#2D4A3E", fontSize: "5rem", fontWeight: 700 }}>O</span>
+    <main className="pt-24 bg-bg min-h-screen">
+      {/* Decorative header */}
+      <div className="text-center py-16 px-6">
+        <svg className="mx-auto mb-6 text-pink" width="60" height="20" viewBox="0 0 60 20">
+          <path d="M0 10 Q15 0 30 10 Q45 20 60 10" stroke="currentColor" strokeWidth="2" fill="none" />
+        </svg>
+        <h1 className="font-serif text-5xl text-pink">Meet Orie</h1>
+      </div>
+
+      {/* Two-column bio */}
+      <section className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-16">
+        {/* Left: portrait */}
+        <div>
+          <div className="aspect-square bg-surface-2 border border-border flex items-center justify-center rounded-sm">
+            <div className="text-center">
+              <span className="font-serif text-text/30 text-8xl font-bold">O</span>
+              <p className="text-text-muted text-sm font-sans mt-2">Portrait coming soon</p>
             </div>
           </div>
+        </div>
 
-          {/* Bio */}
-          <div>
-            <p style={{ color: "#C8A96E", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", fontSize: "0.75rem", marginBottom: "0.75rem" }}>The Author</p>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 700, color: "#2D4A3E", marginBottom: "1.5rem" }}>{aboutData.headline}</h2>
-            <div>
-              {aboutData.bioParagraphs.map((p, i) => (
-                <p key={i} style={{ color: "#2C2C2C", lineHeight: 1.8, marginBottom: "1rem" }}>{p}</p>
+        {/* Right: bio */}
+        <div className="font-serif text-text/80 text-lg leading-relaxed space-y-6">
+          {aboutData.bio.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+
+          <div className="mt-8 pt-8 border-t border-border">
+            <p className="font-sans uppercase tracking-widest text-pink text-xs mb-4">
+              Fun Facts
+            </p>
+            <ul className="space-y-2 list-none p-0 m-0">
+              {aboutData.funFacts.map((f, i) => (
+                <li key={i} className="font-sans text-sm text-text-muted">
+                  <span className="mr-2">{f.emoji}</span>
+                  {f.text}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </div>
-
-        {/* Fun facts */}
-        <div style={{ marginTop: "4rem", backgroundColor: "#F5EDE0", borderLeft: "4px solid #C8A96E", borderRadius: "0 0.75rem 0.75rem 0", padding: "2rem" }}>
-          <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#2D4A3E", marginBottom: "1rem" }}>Quick Facts</h3>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            {aboutData.funFacts.map((fact, i) => (
-              <li key={i} style={{ color: "#2C2C2C", marginBottom: "0.75rem" }}>{fact}</li>
-            ))}
-          </ul>
-        </div>
-
-        {/* School visits CTA */}
-        <div style={{ marginTop: "4rem", textAlign: "center", backgroundColor: "#2D4A3E", color: "#FDF8F0", borderRadius: "0.75rem", padding: "3rem" }}>
-          <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 700, color: "#C8A96E", marginBottom: "1rem" }}>School Visits &amp; Events</h3>
-          <p style={{ color: "rgba(253,248,240,0.8)", marginBottom: "1.5rem", maxWidth: "36rem", margin: "0 auto 1.5rem" }}>
-            Interested in having Orie speak at your school or event? We would love to connect with young readers and aspiring writers.
-          </p>
-          <a href="/contact" style={{ display: "inline-block", backgroundColor: "#C8A96E", color: "#2D4A3E", fontWeight: 600, padding: "0.75rem 1.5rem", borderRadius: "0.375rem", textDecoration: "none" }}>
-            Get in Touch →
-          </a>
         </div>
       </section>
-    </>
+    </main>
   );
 }

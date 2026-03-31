@@ -1,19 +1,16 @@
 {
   "name": "Orie",
-  "headline": "Young author. Big imagination. Words that take you somewhere new.",
-  "portrait": "/images/orie-portrait.jpg",
-  "bioParagraphs": [
-    "I am Orie, and I have been writing stories for as long as I can remember. It started with scribbled adventures in composition notebooks — tales about brave kids, magical animals, and worlds just a little different from ours. Somewhere along the way, the scribbles turned into chapters, and the chapters turned into actual books.",
-    "When I am not writing, you can find me reading (obviously), exploring new places, or trying to convince my family that we need more bookshelves. I am inspired by authors who make you feel something real — who build worlds you do not want to leave and characters who feel like friends.",
-    "I write because I believe stories have the power to make us braver, kinder, and more curious. And I think young voices have just as much to say as anyone else. Thanks for being here — I am really glad you found your way to my little corner of the book world."
+  "portrait": "/images/about/orie-portrait.jpg",
+  "bio": [
+    "I'm Orie, and I've been writing stories for as long as I can remember. It started with scribbled adventures in composition notebooks — tales about brave kids, magical animals, and worlds just a little different from ours. Somewhere along the way, the scribbles turned into chapters, and the chapters turned into actual books.",
+    "When I'm not writing, you can find me reading (obviously), exploring new places, or trying to convince my family that we need more bookshelves. I'm inspired by authors who make you feel something real — who build worlds you don't want to leave and characters who feel like friends.",
+    "I write because I believe stories have the power to make us braver, kinder, and more curious. And I think young voices have just as much to say as anyone else. Thanks for being here — I'm really glad you found your way to my little corner of the book world."
   ],
   "funFacts": [
-    "📚 Favorite book: too many to pick just one",
-    "✍️ Writing fuel: hot chocolate and lo-fi music",
-    "🌍 Dream: to write a book that ends up on someone's changed-my-life list",
-    "🐾 Fun fact: I name all my characters before I know what they look like"
+    { "emoji": "\ud83d\udcda", "text": "Favorite book: too many to pick just one (but okay, maybe Bridge to Terabithia)" },
+    { "emoji": "\u270d\ufe0f", "text": "Writing fuel: hot chocolate and lo-fi music" },
+    { "emoji": "\ud83c\udf0d", "text": "Dream: to write a book that ends up on someone's \"changed my life\" list" },
+    { "emoji": "\ud83d\udc3e", "text": "Fun fact: I name all my characters before I know what they look like" }
   ],
-  "socials": [
-    { "platform": "instagram", "url": "https://instagram.com/oriestories", "label": "@oriestories" }
-  ]
+  "shortBio": "Hi! I'm Orie — a young writer who's been making up stories since before I could spell them all correctly. I believe every person has a story worth telling, and I'm just getting started with mine. Welcome to my little corner of the book world."
 }

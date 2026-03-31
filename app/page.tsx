@@ -1,92 +1,107 @@
 import Link from "next/link";
-import Button from "@/components/Button";
-import FadeIn from "@/components/FadeIn";
 import booksData from "@/content/books.json";
 import aboutData from "@/content/about.json";
 
 export default function HomePage() {
-  const featured = booksData.books.find((b) => b.isFeatured) || booksData.books[0];
+  const featured = booksData.books.find((b) => b.featured) || booksData.books[0];
 
   return (
     <>
-      {/* Hero */}
-      <section style={{ minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", backgroundColor: "#FDF8F0", padding: "0 1.5rem" }}>
-        <div style={{ maxWidth: "48rem" }}>
-          <FadeIn>
-            <p style={{ color: "#C8A96E", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", fontSize: "0.875rem", marginBottom: "1rem" }}>Welcome</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.5rem, 8vw, 4.5rem)", fontWeight: 700, color: "#2D4A3E", lineHeight: 1.2, marginBottom: "1.5rem" }}>
-              Stories by Orie
-            </h1>
-            <p style={{ color: "#6B7280", fontSize: "1.25rem", fontStyle: "italic", marginBottom: "2rem" }}>
-              Young author. Big imagination. Words that take you somewhere new.
+      {/* Hero — full viewport, dark, book cover centered */}
+      <section className="min-h-screen flex items-center justify-center relative bg-bg overflow-hidden pt-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-bg via-surface to-bg opacity-80" />
+
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto px-6 text-center md:text-left">
+          {/* Left text */}
+          <div className="md:text-left text-center">
+            <p className="font-serif italic text-2xl text-text/80 leading-relaxed">
+              &ldquo;A story about courage,
+              <br />
+              curiosity, and magic.&rdquo;
             </p>
-            <Button href="/books">Explore My Books →</Button>
-          </FadeIn>
-        </div>
-      </section>
+          </div>
 
-      {/* Featured Book */}
-      <section style={{ backgroundColor: "#F5EDE0", padding: "5rem 1.5rem" }}>
-        <div style={{ maxWidth: "64rem", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "3rem", alignItems: "center" }}>
-          <FadeIn>
-            <div style={{ aspectRatio: "3/4", backgroundColor: "#2D4A3E", borderRadius: "0.75rem", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 20px 40px rgba(0,0,0,0.2)", maxWidth: "24rem", margin: "0 auto" }}>
-              <div style={{ textAlign: "center", padding: "0 1.5rem" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#FDF8F0", fontSize: "1.5rem", fontWeight: 700, lineHeight: 1.3 }}>{featured.title}</p>
-                <p style={{ color: "#E8D5A8", marginTop: "0.5rem" }}>by Orie</p>
+          {/* Center: book cover */}
+          <div className="flex justify-center">
+            <div className="w-64 h-96 bg-surface-2 rounded-sm shadow-2xl border border-border flex items-center justify-center">
+              <div className="text-center px-6">
+                <p className="font-serif text-text text-2xl font-bold leading-tight">
+                  {featured.title}
+                </p>
+                <p className="text-pink-light mt-2 font-sans text-sm">by Orie</p>
               </div>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div>
-              <p style={{ color: "#C8A96E", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", fontSize: "0.75rem", marginBottom: "0.5rem" }}>Latest Release</p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D4A3E", marginBottom: "1rem" }}>{featured.title}</h2>
-              <p style={{ color: "#6B7280", lineHeight: 1.7, marginBottom: "1.5rem" }}>{featured.tagline}</p>
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                <Button href={featured.buyUrl} external>Get Your Copy ↗</Button>
-                <Button href={`/books/${featured.slug}`} variant="secondary">Learn More</Button>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* About Teaser */}
-      <section style={{ padding: "5rem 1.5rem" }}>
-        <div style={{ maxWidth: "64rem", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "3rem", alignItems: "center" }}>
-          <FadeIn>
-            <div style={{ width: "16rem", height: "16rem", borderRadius: "50%", backgroundColor: "#C8A96E", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto", boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#2D4A3E", fontSize: "4rem", fontWeight: 700 }}>O</span>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div>
-              <p style={{ color: "#C8A96E", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", fontSize: "0.75rem", marginBottom: "0.5rem" }}>The Author</p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D4A3E", marginBottom: "1rem" }}>Meet Orie</h2>
-              <p style={{ color: "#6B7280", lineHeight: 1.7, marginBottom: "1.5rem" }}>{aboutData.bioParagraphs[0]}</p>
-              <Link href="/about" style={{ color: "#2D4A3E", fontWeight: 600, textDecoration: "none" }}>More About Me →</Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section style={{ backgroundColor: "#F5EDE0", padding: "5rem 1.5rem" }}>
-        <FadeIn>
-          <div style={{ maxWidth: "36rem", margin: "0 auto", textAlign: "center" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D4A3E", marginBottom: "1rem" }}>Stay in the Story</h2>
-            <p style={{ color: "#6B7280", marginBottom: "2rem" }}>New books, behind-the-scenes updates, and notes from Orie — straight to your inbox.</p>
-            <div style={{ display: "flex", flexDirection: "row", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <input
-                type="email"
-                placeholder="your@email.com"
-                style={{ flex: 1, minWidth: "200px", padding: "0.75rem 1rem", borderRadius: "0.375rem", border: "1px solid #E8D5A8", backgroundColor: "#FDF8F0", color: "#2C2C2C", outline: "none", fontSize: "1rem" }}
-              />
-              <button style={{ backgroundColor: "#C8A96E", color: "#2D4A3E", fontWeight: 600, padding: "0.75rem 1.5rem", borderRadius: "0.375rem", border: "none", cursor: "pointer", fontSize: "1rem" }}>
-                Subscribe
-              </button>
             </div>
           </div>
-        </FadeIn>
+
+          {/* Right text */}
+          <div className="md:text-right text-center">
+            <p className="font-sans uppercase tracking-widest text-pink text-sm mb-2">
+              Now Available
+            </p>
+            <p className="font-serif text-2xl text-text">{featured.title}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro — lighter bg, centered */}
+      <section className="bg-surface py-24 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
+          <p className="font-sans uppercase tracking-widest text-pink text-xs mb-6">
+            Young Author. Big Imagination.
+          </p>
+          <p className="font-serif text-xl text-text leading-relaxed mb-8">
+            {aboutData.shortBio}
+          </p>
+          <Link
+            href="/about"
+            className="inline-block border border-pink text-pink font-sans text-sm uppercase tracking-widest px-8 py-3 no-underline hover:bg-pink hover:text-bg transition-colors"
+          >
+            Meet Orie &rarr;
+          </Link>
+        </div>
+      </section>
+
+      {/* Pull quote */}
+      <section className="bg-bg py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-serif italic text-2xl md:text-3xl text-text/80 leading-relaxed mb-6">
+            &ldquo;I read this in one sitting. The garden felt so real I kept looking out the window.&rdquo;
+          </p>
+          <p className="font-sans text-sm uppercase tracking-widest text-text-muted">
+            &mdash; A Reader
+          </p>
+        </div>
+      </section>
+
+      {/* Featured Book strip */}
+      <section className="bg-surface py-20 px-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12 items-center">
+          <div className="flex justify-center">
+            <div className="w-48 h-72 bg-surface-2 border border-border rounded-sm flex items-center justify-center">
+              <div className="text-center px-4">
+                <p className="font-serif text-text text-lg font-bold leading-tight">
+                  {featured.title}
+                </p>
+                <p className="text-pink-light mt-1 font-sans text-xs">by Orie</p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center md:text-left">
+            <p className="font-sans uppercase tracking-widest text-pink text-xs mb-2">
+              Featured Book
+            </p>
+            <h2 className="font-serif text-3xl text-text mb-3">{featured.title}</h2>
+            <p className="font-serif text-text/70 text-lg mb-6">{featured.tagline}</p>
+            <a
+              href={featured.buyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-pink text-bg font-sans text-sm uppercase tracking-widest px-8 py-3 no-underline hover:bg-pink-light transition-colors"
+            >
+              Get the Book &rarr;
+            </a>
+          </div>
+        </div>
       </section>
     </>
   );
