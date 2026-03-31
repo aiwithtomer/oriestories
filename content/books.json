@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "slug": "the-starlit-garden",
+      "title": "The Starlit Garden",
+      "author": "Orie",
+      "tagline": "A story about courage, curiosity, and the magic hiding in ordinary places.",
+      "description": "Maya has always felt like the odd one out — too curious for her own good, too imaginative for the kids at school, and way too obsessed with the overgrown lot at the end of Maple Street. But when she sneaks through the rusted gate one night, she finds something impossible: a garden that only exists under starlight.\n\nSuddenly, Maya is tangled up in a world of luminous flowers, talking foxes, and a mystery that has been waiting decades for someone brave enough to solve it. To save the garden — and maybe herself — Maya will have to trust her instincts, face her fears, and learn that the most extraordinary things grow in the most unexpected places.",
+      "coverImage": "/images/books/starlit-garden-cover.jpg",
+      "buyUrl": "https://oriestories-shop.fourthwall.com",
+      "genre": ["Middle Grade", "Fantasy"],
+      "ageRange": "Ages 8–12",
+      "publishDate": "2025-01-01",
+      "isFeatured": true,
+      "pages": 210,
+      "praise": [
+        {
+          "quote": "A sparkling debut full of wonder and heart. Orie has a gift for making you believe in magic.",
+          "attribution": "— A Young Reader"
+        },
+        {
+          "quote": "I read this in one sitting. The garden felt so real I kept looking out the window.",
+          "attribution": "— A Fan"
+        }
+      ]
+    }
+  ]
+}

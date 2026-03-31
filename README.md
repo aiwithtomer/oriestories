@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orie Stories Website
 
-## Getting Started
+Author website for Orie — built with Next.js + Tailwind CSS, deployed on Vercel (free).
 
-First, run the development server:
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Add a Book
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Edit `content/books.json` — copy the existing entry and update all fields
+2. Add cover image to `public/images/books/your-cover.jpg`
+3. Set `"isFeatured": true` on the book you want featured on the homepage
 
-## Learn More
+## How to Update the Bio
 
-To learn more about Next.js, take a look at the following resources:
+Edit `content/about.json` — update `bioParagraphs`, `funFacts`, or `socials`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push this repo to GitHub
+2. Go to [vercel.com](https://vercel.com) → New Project → Import your GitHub repo
+3. Vercel auto-detects Next.js — just click Deploy
+4. Done. Every push to `main` auto-deploys.
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_SITE_NAME` | Site name |
+| `NEXT_PUBLIC_SITE_URL` | Production URL |
+| `NEXT_PUBLIC_FOURTHWALL_URL` | Fourthwall store URL |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS + inline styles
+- **Content:** JSON files in `/content` — no CMS needed
+- **Commerce:** Fourthwall (external store, buy buttons link there)
+- **Hosting:** Vercel (free tier)
+
+## Pages
+
+| Route | Page |
+|---|---|
+| `/` | Home — hero, featured book, author teaser, newsletter |
+| `/books` | Book grid |
+| `/books/[slug]` | Individual book detail |
+| `/about` | Bio, fun facts, school visits CTA |
+| `/contact` | Email + socials |

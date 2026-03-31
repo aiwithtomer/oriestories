@@ -1,0 +1,19 @@
+{
+  "name": "Orie",
+  "headline": "Young author. Big imagination. Words that take you somewhere new.",
+  "portrait": "/images/orie-portrait.jpg",
+  "bioParagraphs": [
+    "I am Orie, and I have been writing stories for as long as I can remember. It started with scribbled adventures in composition notebooks — tales about brave kids, magical animals, and worlds just a little different from ours. Somewhere along the way, the scribbles turned into chapters, and the chapters turned into actual books.",
+    "When I am not writing, you can find me reading (obviously), exploring new places, or trying to convince my family that we need more bookshelves. I am inspired by authors who make you feel something real — who build worlds you do not want to leave and characters who feel like friends.",
+    "I write because I believe stories have the power to make us braver, kinder, and more curious. And I think young voices have just as much to say as anyone else. Thanks for being here — I am really glad you found your way to my little corner of the book world."
+  ],
+  "funFacts": [
+    "📚 Favorite book: too many to pick just one",
+    "✍️ Writing fuel: hot chocolate and lo-fi music",
+    "🌍 Dream: to write a book that ends up on someone's changed-my-life list",
+    "🐾 Fun fact: I name all my characters before I know what they look like"
+  ],
+  "socials": [
+    { "platform": "instagram", "url": "https://instagram.com/oriestories", "label": "@oriestories" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "siteName": "Orie Stories",
+  "tagline": "Young author. Big imagination.",
+  "fourthwallUrl": "https://oriestories-shop.fourthwall.com",
+  "contactEmail": "hello@oriestories.com",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Books", "href": "/books" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}
