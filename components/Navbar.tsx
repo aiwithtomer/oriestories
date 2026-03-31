@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 bg-bg/95 backdrop-blur border-b border-border">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Author name — left */}
-        <Link href="/" className="font-serif font-bold text-xl text-text no-underline">
+        <Link href="/" className="font-bold text-xl text-text no-underline" style={{ fontFamily: "var(--font-nunito)" }}>
           Orie
         </Link>
 

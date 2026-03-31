@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0C0C0C",
-        surface: "#161616",
-        "surface-2": "#1F1F1F",
-        pink: "#E8396B",
-        "pink-light": "#FF6B95",
-        "pink-muted": "#8B1A3C",
-        text: "#F2F2F2",
-        "text-muted": "#9A9A9A",
-        border: "#2A2A2A",
-        "footer-bg": "#080808",
+        bg: "#1A1718",
+        surface: "#231E20",
+        "surface-2": "#2A2427",
+        pink: "#F2B8D4",
+        "pink-light": "#F7D0E4",
+        "pink-muted": "#C9899F",
+        text: "#F2EEF0",
+        "text-muted": "#B8A8B0",
+        border: "#2A2427",
+        "footer-bg": "#110F10",
       },
       fontFamily: {
         serif: ["var(--font-playfair)", "Georgia", "serif"],

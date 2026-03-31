@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat } from "next/font/google";
+import { Playfair_Display, Montserrat, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,6 +14,12 @@ const playfair = Playfair_Display({
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
+  display: "swap",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
   display: "swap",
 });
 
@@ -32,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${montserrat.variable} bg-bg text-text font-serif`}>
+      <body className={`${playfair.variable} ${montserrat.variable} ${nunito.variable} bg-bg text-text font-serif`}>
         <Navbar />
         {children}
         <Footer />
