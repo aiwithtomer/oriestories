@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import booksData from "@/content/books.json";
 
 export const metadata: Metadata = {
@@ -16,13 +17,15 @@ export default function BooksPage() {
       <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* Left: book cover — large */}
         <div>
-          <div className="w-full aspect-[2/3] bg-surface-2 border border-border flex items-center justify-center rounded-sm">
-            <div className="text-center px-8">
-              <p className="font-serif text-text text-3xl font-bold leading-tight">
-                {featured.title}
-              </p>
-              <p className="text-pink-light mt-3 font-sans text-sm">by Orie</p>
-            </div>
+          <div className="w-full aspect-[2/3] rounded-sm overflow-hidden shadow-lg">
+            <Image
+              src={featured.coverImage}
+              alt={`${featured.title} by ${featured.author}`}
+              width={600}
+              height={900}
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
         </div>
 
@@ -70,10 +73,14 @@ export default function BooksPage() {
                     href={`/books/${book.slug}`}
                     className="flex gap-6 items-start p-6 border border-border rounded-sm no-underline hover:border-pink transition-colors group"
                   >
-                    <div className="w-24 h-36 bg-surface-2 border border-border rounded-sm flex items-center justify-center shrink-0">
-                      <p className="font-serif text-text text-xs font-bold text-center px-2 leading-tight">
-                        {book.title}
-                      </p>
+                    <div className="w-24 h-36 rounded-sm overflow-hidden shrink-0 shadow-md">
+                      <Image
+                        src={book.coverImage}
+                        alt={`${book.title} by ${book.author}`}
+                        width={96}
+                        height={144}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
                       <h3 className="font-serif text-xl text-text mb-1 group-hover:text-pink transition-colors">

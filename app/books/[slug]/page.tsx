@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import booksData from "@/content/books.json";
 
 export async function generateStaticParams() {
@@ -34,13 +35,15 @@ export default async function BookPage({
       <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* Left: book cover */}
         <div>
-          <div className="w-full aspect-[2/3] bg-surface-2 border border-border flex items-center justify-center rounded-sm sticky top-24">
-            <div className="text-center px-8">
-              <p className="font-serif text-text text-3xl font-bold leading-tight">
-                {book.title}
-              </p>
-              <p className="text-pink-light mt-3 font-sans text-sm">by Orie</p>
-            </div>
+          <div className="w-full aspect-[2/3] rounded-sm overflow-hidden shadow-lg sticky top-24">
+            <Image
+              src={book.coverImage}
+              alt={`${book.title} by ${book.author}`}
+              width={600}
+              height={900}
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
         </div>
 

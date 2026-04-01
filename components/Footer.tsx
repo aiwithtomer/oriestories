@@ -22,9 +22,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 pb-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left: bio + social + copyright */}
         <div>
-          <p className="font-serif font-bold text-xl text-text mb-3">Orie</p>
+          <p className="text-xl text-pink mb-3 lowercase" style={{ fontFamily: "var(--font-nunito)", fontWeight: 400, fontSize: "1.75rem" }}>oriestories</p>
           <p className="font-serif text-text/70 text-sm leading-relaxed mb-4">
-            Young author of middle grade fiction. Stories about courage, curiosity, and the magic hiding in ordinary places.
+            Orie Shenhar is a middle school student and aspiring writer with a strong interest in storytelling, especially in the romance genre.
           </p>
           <div className="flex items-center gap-3 mb-4">
             <a
